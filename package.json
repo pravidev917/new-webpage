@@ -1,0 +1,17 @@
+{
+  "name": "icoretheme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch styles/main.sass:output/main.css",
+    "build": "sass --no-source-map styles/main.sass:output/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.104.0"
+  }
+}
