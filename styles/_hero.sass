@@ -1,171 +1,78 @@
 @use "_variables" as *
-
-.content
-    display: grid
-    grid-template-columns: repeat(12, 1fr)
-    gap: 1rem
+.main-content
     width: 100%
-
-    margin: 0 auto
-    padding: 1rem
-    box-sizing: border-box
-
-    > .s
-        position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    gap: 20px
+.content-box
+    width: 30rem
+    background-color: $grey
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 15% 1%
+    border-radius: 20px
+    p
+        border-top-right-radius: 10px
+        border-bottom-right-radius: 10px
+        border-bottom-left-radius: 50px
+        padding: 3px 1rem
+        background-color: $orange
+        color: $white
+    ul
+        list-style: none
         display: flex
-        flex-direction: column
-        justify-content: flex-start
+        gap: 20px
+        justify-content: center
         align-items: center
-        overflow: hidden
-        border-radius: 1rem
-        padding: 1.5rem
-        box-sizing: border-box
-        min-width: 0
+        color: $white
+        font-weight: 600
+        font-size: 15px
+        background-color: $white
+        color: $black
+        padding: 1rem 10px
+        border-radius: 20px
 
-    // First 3 cards
-    > .s:nth-child(-n + 3)
-        grid-column: span 4
-        min-height: 30rem
-
-    // Remaining cards
-    > .s:nth-child(n + 4)
-        grid-column: span 3
-        min-height: 20rem
-
-
-// -------------------------
-// ODD CARDS
-// -------------------------
-.s:nth-child(1)
-    background-image: url("../images/cloth.jpeg")
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
-.s:nth-child(2)
-    background-image: url("../images/tech.jpeg")
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
-.s:nth-child(3)
+.content-box:nth-child(1)
     background-image: url("../images/food.jpeg")
     background-repeat: no-repeat
     background-size: cover
-    background-position: center
-.s:nth-child(4)
-    background-image: url("../images/tarvel.jpeg")
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
-.s:nth-child(5)
-    background-image: url("../images/family.jpeg")
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
-.s:nth-child(6)
-    background-image: url("../images/cloth.jpeg")
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
-.s:nth-child(7)
-    background-image: url("../images/tech.jpeg")
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
-.s:nth-child(odd)
-
-    color: $white
-    font-weight: 600
-
-    .c
-        width: fit-content
-        height: fit-content
-        padding: 0.3rem 0.8rem
-        margin: 2rem auto 0
-        background-color: $red
-        border-bottom-left-radius: 10rem
-        border-top-right-radius: 2rem
-        border-bottom-right-radius: 2rem
-
-    .d
-        width: min(20rem, 100%)
-        height: 5rem
-        margin: 1rem auto 0
-        background-color: $black
-        border-radius: 0.5rem
-
-    .e
-        display: flex
-        justify-content: space-evenly
-        align-items: center
-        gap: 1rem
-        width: 100%
-        margin-top: 1rem
-        color: $black
-
-
-// -------------------------
-// EVEN CARDS
-// -------------------------
-
-.s:nth-child(even)
+.content-box:nth-child(2)
     background-image: url("../images/travel.jpeg")
     background-repeat: no-repeat
     background-size: cover
-    background-position: center
-    color: $black
-    font-weight: 600
-
-    .c
-        width: fit-content
-        height: fit-content
-        padding: 0.3rem 0.8rem
-        margin: 2rem auto 0
-        background-color: $red
-        border-bottom-left-radius: 10rem
-        border-top-right-radius: 2rem
-        border-bottom-right-radius: 2rem
-
-    .d
-        width: min(20rem, 100%)
-        height: 5rem
-        margin: 1rem auto 0
-        background-color: $black
-        border-radius: 0.5rem
-
-    .e
-        display: flex
-        justify-content: space-evenly
-        align-items: center
-        gap: 1rem
-        width: 100%
-        margin-top: 1rem
-        color: $black
+.content-box:nth-child(3)
+    background-image: url("../images/tech.jpeg")
+    background-repeat: no-repeat
+    background-size: cover
+.content-box:nth-child(4)
+    background-image: url("../images/beach.jpeg")
+    background-repeat: no-repeat
+    background-size: cover
+.content-box:nth-child(5)
+    background-image: url("../images/cloth.jpeg")
+    background-repeat: no-repeat
+    background-size: cover
 
 
-// -------------------------
-// RESPONSIVE
-// -------------------------
-
-@media (max-width: 900px)
-
-    .content
-        grid-template-columns: repeat(2, 1fr)
-
-        > .s:nth-child(-n + 3)
-            grid-column: span 1
-            min-height: 25rem
-
-        > .s:nth-child(n + 4)
-            grid-column: span 1
-            min-height: 20rem
-
-
-@media (max-width: 600px)
-
-    .content
-        grid-template-columns: 1fr
-        gap: 1rem
-
-        > .s
-            grid-column: 1 !important
-            min-height: 20rem !important
+@media (min-width: 615px) and (max-width: 1100px )
+    .content-box:nth-child(-n+2)
+        width: 25%
+        font-size: 30px
+        padding: 8rem 70px
+    .content-box:nth-child(n+3):nth-child(-n+5)
+        width: 15%
+        font-size: 20px
+        padding: 5rem 40px
+@media (min-width: 1101px)
+    .content-box:nth-child(-n+2)
+        width: 40%
+        font-size: 30px
+        padding: 8rem 70px
+    .content-box:nth-child(n+3):nth-child(-n+5)
+        width: 25%
+        font-size: 20px
+        padding: 5rem 40px

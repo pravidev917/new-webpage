@@ -1,0 +1,215 @@
+@use "_variables" as *
+.trending-content
+    width:100%
+    margin: 10px
+
+.trending-container1
+    width: 97%
+    background-color: $black
+    color: $white
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    hr
+        border: 2px solid $white
+        width: 100%
+        margin: 20px
+
+    .trending-head
+        background-color: $black
+        margin: 0px
+        position: relative
+        top: -35px
+        padding: 3px 20px
+
+    .trending-box:nth-of-type(n+2):nth-of-type(-n+3)
+        width: 30%
+        padding: 1rem
+        margin: auto
+        img
+            width: 100%
+            height: 20rem
+            border-radius: 3px
+        h2
+            display: inline-block
+            font-weight: 600
+            font-size: 20px
+
+    .trending-box:nth-of-type(1)
+        margin: 10px
+        padding: 1.2rem
+        background-image: url("../images/flower.jpeg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        width: 90%
+        height: 300px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-radius: 3px
+        p
+            border-top-right-radius: 10px
+            border-bottom-right-radius: 10px
+            border-bottom-left-radius: 50px
+            padding: 3px 1rem
+            background-color: $orange
+            color: $white
+            width: fit-content
+        ul
+            list-style: none
+            display: flex
+            gap: 20px
+            justify-content: center
+            align-items: center
+            color: $white
+            font-weight: 600
+            font-size: 15px
+            background-color: $white
+            color: $black
+            padding: 1rem 10px
+            border-radius: 20px
+
+
+.trending-container2
+    width: 97%
+    .trending-box:nth-of-type(1)
+        background-image: url("../images/family.jpeg")
+        padding: 1.2rem
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        width: 90%
+        height: 300px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-radius: 3px
+        p
+            border-top-right-radius: 10px
+            border-bottom-right-radius: 10px
+            border-bottom-left-radius: 50px
+            padding: 3px 1rem
+            background-color: $orange
+            color: $white
+            width: fit-content
+        ul
+            list-style: none
+            display: flex
+            gap: 20px
+            justify-content: center
+            align-items: center
+            color: $white
+            font-weight: 600
+            font-size: 15px
+            background-color: $white
+            color: $black
+            padding: 1rem 10px
+            border-radius: 20px
+    .trending-box:nth-child(n+2):nth-child(-n+5)
+        display: flex
+        gap: 10px
+        .trending-title
+            width: 60%
+            height: fit-content
+            display: flex
+            flex-direction: column
+
+        img
+            height: 10rem
+            width: 35%
+            border-radius: 2px
+            margin: 10px
+
+@media (min-width: 700px)
+    .trending-content
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .trending-container1
+        width: 48%
+        .trending-box:nth-of-type(n+2):nth-of-type(-n+3)
+            img
+                height: 200px
+    .trending-container2
+        width: 48%
+        margin: 20px
+        .trending-head
+            padding: 0px
+            margin: 0px
+            text-align: center
+            font-size: 40px
+        .trending-box:nth-of-type(n+2):nth-of-type(-n+5)
+            img
+                height: 125px
+
+.scroll-content
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    height: 200px
+    .scroll-box
+        height: 100%
+
+        p
+            border-top-right-radius: 10px
+            border-bottom-right-radius: 10px
+            border-bottom-left-radius: 50px
+            padding: 3px 1rem
+            background-color: $orange
+            color: $white
+            width: fit-content
+        ul
+            list-style: none
+            display: flex
+            gap: 15px
+            justify-content: center
+            align-items: center
+            color: $white
+            font-weight: 600
+            font-size: 15px
+            background-color: $white
+            color: $black
+            padding: 0.7rem 10px
+            border-radius: 20px
+
+    .scroll-box:nth-child(1)
+        background-image: url("../images/pink.jpeg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+    .scroll-box:nth-child(2)
+        background-image: url("../images/beach.jpeg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+    .scroll-box:nth-child(3)
+        background-image: url("../images/flower.jpeg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+    .scroll-box:nth-child(4)
+        background-image: url("../images/family.jpeg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+
+@media (min-width: 700px)
+    .scroll-content
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        height: 500px
+    .scroll-box
+        width: 25%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
